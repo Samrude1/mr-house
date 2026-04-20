@@ -1,4 +1,4 @@
-# 🤖 Mr. House - Lucky 38 Mainframe AI
+# 🤖 RobCo Termlink - Mr. House AI
 
 An immersive, retro-futuristic AI chatbot experience themed after Fallout: New Vegas's Robert House and the Lucky 38 casino. Built with React, TypeScript, and Google's Gemini AI.
 
@@ -34,6 +34,8 @@ An immersive, retro-futuristic AI chatbot experience themed after Fallout: New V
 - Accessibility-focused with proper semantic HTML
 - No placeholders - fully functional demo
 
+![Mr. House UI Preview](./house.png)
+
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -44,8 +46,8 @@ An immersive, retro-futuristic AI chatbot experience themed after Fallout: New V
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Samrude1/mr-house.git
-   cd mr-house
+   git clone https://github.com/Samrude1/robco-termlink.git
+   cd robco-termlink
    ```
 
 2. **Install dependencies**
@@ -57,7 +59,7 @@ An immersive, retro-futuristic AI chatbot experience themed after Fallout: New V
    - Create or edit `.env.local` in the project root
    - Add your Gemini API key:
      ```
-     API_KEY=your_gemini_api_key_here
+     GEMINI_API_KEY=your_gemini_api_key_here
      ```
 
 4. **Run the development server**
@@ -79,7 +81,9 @@ An immersive, retro-futuristic AI chatbot experience themed after Fallout: New V
 ## 📁 Project Structure
 
 ```
- mr-house/
+ robco-termlink/
+├── api/
+│   └── chat.ts             # Vercel Serverless Function (Backend API)
 ├── components/
 │   ├── ChatWindow.tsx      # Main chat interface & state management
 │   ├── ChatMessage.tsx     # Individual message bubbles
@@ -133,7 +137,7 @@ This project is for educational and demonstration purposes.
 ### 🛡️ Security Note
 
 This is a client-side demonstration. The Gemini API key is configured via environment variables. For a production-ready application, it is recommended to:
-1.  **Restrict API Key**: In the Google Cloud Console / AI Studio, restrict your API key to only allow requests from your specific domain (e.g., `mr-house.vercel.app`).
+1.  **Restrict API Key**: In the Google Cloud Console / AI Studio, restrict your API key to only allow requests from your specific domain (e.g., `robco-termlink.vercel.app`).
 2.  **Backend Proxy**: Move the AI logic to a server-side function (like Vercel Functions) to keep the API key entirely hidden from the client.
 3.  **Rate Limiting**: This app includes a frontend-level cooldown (2s) to prevent simple bot spam.
 
